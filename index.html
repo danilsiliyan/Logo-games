@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <title>Логопедические игры</title>
   <link rel="shortcut icon" href="img/iconlogo.PNG"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
  
   <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
@@ -33,7 +36,7 @@
 }
 
 .logo {
-  background-color: rgb(211, 206, 206);
+background-color: #e4f0fdb6;
  position: absolute;
  left: 0;
  right: 0;
@@ -48,26 +51,24 @@ img {
     border-radius: 5%;
 }
 
- .vk a {
-  text-decoration: none;
-  font-size: 40px;
-  color: black;
-  text-align: center;
+div p {
+  border: 1px solid black;
+  background-color: #daebfcb6;
 }
-
-.vk {
-  background-color: rgb(211, 206, 206);
-  padding-top: 10px;
-  padding-bottom: 10px;
-}    
-
-.vk a:hover {
-  color: blue;
-  text-decoration:underline;
-} 
 
 p {
   font-size: 40px;
+  font-family: Rubik Doodle Shadow;
+  color: rgb(0, 7, 5);
+}    
+
+.game {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  padding: 10px;
 }    
     
 </style>
@@ -76,14 +77,14 @@ p {
 <body>
   <main>
  <div class="logo">
-    <div class="vk"><a href="https://vk.com/logogamesru">Группа ВК</a></div>
-    <a href="https://vk.com/logogamesru"><img src="img/logoVk.png" width="192" height="108" alt="лого вк"></a>
     <div><p>Нажмите на картинку, чтобы начать играть</p></div>
+    <div class="game"> 
     <a href="Avtomatizaciya S/indexSi.html"><img src="img/S.JPG" width="800" height="600" alt="Игра Автоматизация С и Сь"></a>
     <a href="diagnostika/indexDiagnostika.html"><img src="img/logo diagnostik.JPG" width="800" height="600" alt="Игра Логопедическая диагностика"></a>
     <a href="Avtomatizaciya L/indexGonki.html"><img src="img/gonki.JPG" width="800" height="600" alt="Игра Гонки Автоматизация Л и Ль"></a>
     <a href="Avtomatizaciya R/indexZvykR.html"><img src="img/R.JPG" width="800" height="600" alt="Игра Автоматизация Р и Рь"></a>
     <a href="Avtomatizaciya v slogax/indexSlogi.html"><img src="img/v slogax.JPG" width="800" height="600" alt="Игра Автоматизация в слогах"></a>
+  </div>
   </div>
  </main>
 </body>
