@@ -71,12 +71,150 @@ p {
   grid-row-gap: 10px;
   padding: 10px;
 }    
+
+/* все что ниже это таймер */
+
+body {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 100;
+    }
+    .countdown-title {
+      color: #990066;
+      font-weight: 100;
+      font-size: 40px;
+      margin: 40px 0px 20px;
+    } 
+    .countdown {
+      font-family: sans-serif;
+      color: #fff;
+      display: inline-block;
+      font-weight: 100;
+      text-align: center;
+      font-size: 30px;
+    }
+    .countdown-number {
+      padding: 10px;
+      border-radius: 3px;
+      background: #9900CC;
+      display: inline-block;
+    }
+    .countdown-time {
+      padding: 15px;
+      border-radius: 3px;
+      background: #990066;
+      display: inline-block;
+    }
+    .countdown-text {
+      display: block;
+      padding-top: 5px;
+      font-size: 16px;
+    }
+    .deadline-message{
+      display: none;
+      font-size: 24px;
+      font-style: italic;
+    }
+    .visible{
+      display: block;
+    }
+    .hidden{
+      display: none;
+    }
+
+    .mone {
+      color: red;
+    }
+
+    .mone span {
+      color: green;
+    }
+
+    .skidka {
+      margin-top: 20px;
+    }    
     
 </style>
   
 </head>
 <body>
   <main>
+
+<!--  таймер  -->
+<h1 class="countdown-title">Скидка на игру "Снежное приключение" закончится через:</h1>
+<div id="countdown" class="countdown">
+<div class="countdown-number">
+<span class="days countdown-time"></span>
+<span class="countdown-text">Дни</span>
+</div>
+<div class="countdown-number">
+    <span class="hours countdown-time"></span>
+    <span class="countdown-text">Часы</span>
+  </div>
+  <div class="countdown-number">
+    <span class="minutes countdown-time"></span>
+    <span class="countdown-text">Минуты</span>
+  </div>
+  <div class="countdown-number">
+    <span class="seconds countdown-time"></span>
+    <span class="countdown-text">Секунды</span>
+  </div>
+</div>
+<div id="deadline-message" class="deadline-message">
+  Время акции истекло!
+</div>
+<!--  js script  -->
+<script>
+function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+} 
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var daysSpan = clock.querySelector(".days");
+  var hoursSpan = clock.querySelector(".hours");
+  var minutesSpan = clock.querySelector(".minutes");
+  var secondsSpan = clock.querySelector(".seconds");
+ 
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+ 
+    if (t.total <= 0) {
+      document.getElementById("countdown").className = "hidden";
+      document.getElementById("deadline-message").className = "visible";
+      clearInterval(timeinterval);
+      return true;
+    } 
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ("0" + t.hours).slice(-2);
+    minutesSpan.innerHTML = ("0" + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ("0" + t.seconds).slice(-2);
+  } 
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
+ 
+var deadline = '2024-01-09'; // конечная дата отсчета
+initializeClock('countdown', deadline);
+</script>
+
+<div></div>
+
+<img class="skidka" src="img/S.JPG" alt="автоматизация с" width="600" height="400">
+<p class="mone"><s>450 руб</s><br><span>369 руб</span></p>
+
+<!--  таймер  -->    
+    
  <div class="logo">
     <div><p>Нажмите на картинку, чтобы начать играть</p></div>
     <div class="game"> 
