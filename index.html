@@ -3,6 +3,11 @@
 <head>
   
   <meta charset="UTF-8">
+
+  <meta name="viewport" content="initial-scale=1, viewport-fit=cover, width=device-width"></meta>
+  <meta name="apple-mobile-web-app-capable" content="yes"></meta>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"></meta>
+  
   <title>Логопедические игры</title>
   <link rel="shortcut icon" href="img/iconlogo.PNG"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,7 +39,10 @@
     width: 100%;
     height: 100%;
     background-color: #e4f0fdb6;
+    min-height: calc(100% + env(safe-area-inset-top));
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);  
 }
+    
 
 .logo {
 
