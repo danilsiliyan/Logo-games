@@ -73,28 +73,34 @@ div p {
   background-color: #daebfcb6;
 }
 
-p {
-  font-size: 40px;
-  font-family: Rubik Doodle Shadow;
-  color: rgb(0, 7, 5);
-}    
-
 .game {
-
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   padding: 10px;
-}     
-    
+}  
+
+ .description {
+   font-size: 40px;
+  font-family: Rubik Doodle Shadow;
+  color: rgb(0, 7, 5);
+
+   @media (max-width: 1024px) {
+   font-size: 24px;
+   }
+
+    @media (max-width: 480px) {
+   font-size: 18px;
+   }
+ }   
 </style>
   
 </head>
 <body>
   <main>
 <div class="logo">
-    <div><p>Нажмите на картинку, чтобы начать играть</p></div>
+    <div><p class="description">Нажмите на картинку, чтобы начать играть</p></div>
     <div class="game"> 
     <a href="Avtomatizaciya S/indexSi.html"><img src="img/S.JPG" width="800" height="600" alt="Игра Автоматизация С и Сь"></a>
     <a href="diagnostika/indexDiagnostika.html"><img src="img/logo diagnostik.JPG" width="800" height="600" alt="Игра Логопедическая диагностика"></a>
