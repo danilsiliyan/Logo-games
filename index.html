@@ -14,6 +14,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="css/style.css" >
+
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=1">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -43,79 +45,87 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/95760788" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
-
-
-
-  <style type="text/css">
-    body {
-    width: 100%;
-    height: 100%;
-    background-color: #e4f0fdb6;
-    min-height: calc(100% + env(safe-area-inset-top));
-    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);  
-}
-    
-
-.logo {
-
- position: absolute;
- left: 0;
- right: 0;
- margin: 0 auto;
- text-align: center;
- padding-top: 0px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5%;
-}
-
-div p {
-  border: 1px solid black;
-  background-color: #daebfcb6;
-}
-
-.game {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-  padding: 10px;
-}  
-
- .description {
-   font-size: 40px;
-  font-family: Rubik Doodle Shadow;
-  color: rgb(0, 7, 5);
-
-   @media (max-width: 1024px) {
-   font-size: 24px;
-   }
-
-    @media (max-width: 480px) {
-   font-size: 16px;
-   }
- }   
-</style>
   
 </head>
 <body>
   <main>
+
+    <p class="description">Логопедические игры</p>
    
-<div class="logo">
-    <div><p class="description">Нажмите на картинку, чтобы начать играть</p></div>
-    <div class="game"> 
-    <a href="avtomatizaciya-sh-and-par/indexsh.html"><img src="img/SH.jpg" width="800" height="600" alt="Игра Автоматизация Ш"></a>
-    <a href="frukty/indexFry.html"><img src="img/fry.jpeg" width="800" height="600" alt="Овощи и фрукты онлайн игра"></a>  
-    <a href="avtomatizaciya-s-par/indexS.html"><img src="img/S.JPG" width="800" height="600" alt="Игра Автоматизация С и Сь"></a>
-    <a href="diagnostika-par/indexDiagnostika.html"><img src="img/logo diagnostik.JPG" width="800" height="600" alt="Игра Логопедическая диагностика"></a>
-    <a href="avtomatizaciya-l-par/indexGonki.html"><img src="img/gonki.JPG" width="800" height="600" alt="Игра Гонки Автоматизация Л и Ль"></a>
-    <a href="avtomatizaciya-r-par1/indexZvykR.html"><img src="img/Ri.jpeg" width="800" height="600" alt="Игра Автоматизация Р и Рь"></a>
-    <a href="slogi-par/indexSlo.html"><img src="img/v slogax.JPG" width="800" height="600" alt="Игра Автоматизация в слогах"></a> 
-  </div>
-  </div>
+<div class="wrapper">
+
+    <div class="card">
+
+      <img src="img/SH.jpg" alt="Игра Автоматизация Ш">
+
+        <div class="btn">
+            <a class="btn-a" href="avtomatizaciya-sh-and-par/indexsh.html">Играть</a>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+      <img src="img/gonki.JPG" alt="Игра Гонки Автоматизация Л и Ль">
+
+        <div class="btn">
+            <a class="btn-a" href="avtomatizaciya-l-par/indexGonki.html">Играть</a>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+      <img src="img/logo diagnostik.JPG" alt="Игра Логопедическая диагностика">
+
+        <div class="btn">
+            <a class="btn-a" href="diagnostika-par/indexDiagnostika.html">Играть</a>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+      <img src="img/S.JPG" alt="Игра Автоматизация С и Сь">
+
+        <div class="btn">
+            <a class="btn-a" href="avtomatizaciya-s-par/indexS.html">Играть</a>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+      <img src="img/Ri.jpeg" alt="Игра Автоматизация Р и Рь">
+
+        <div class="btn">
+            <a class="btn-a" href="avtomatizaciya-r-par1/indexZvykR.html">Играть</a>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+      <img src="img/v slogax.JPG" alt="Игра Автоматизация в слогах">
+
+        <div class="btn">
+            <a class="btn-a" href="slogi-par/indexSlo.html">Играть</a>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+      <img src="img/fry.jpeg" alt="Овощи и фрукты онлайн игра">
+
+        <div class="btn">
+            <a class="btn-a" href="frukty/indexFry.html">Играть</a>
+        </div>
+
+    </div>
+
+</div>
  </main>
 </body>
 </html>  
+ 
